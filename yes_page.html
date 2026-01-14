@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./yes_style.css">
 </head>
 <body>
-    <audio autoplay loop>
+<audio id="bgMusic" loop>
   <source src="love.mp3" type="audio/mpeg">
 </audio>
 
@@ -41,6 +41,12 @@
   }
 
   setInterval(createHeart, 400);
+</script>
+<script>
+  const music = document.getElementById("bgMusic");
+  window.addEventListener("click", () => {
+    music.play().catch(() => {});
+  });
 </script>
 
 </body>
